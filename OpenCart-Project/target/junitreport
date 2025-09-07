@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="59.125" tests="12" skipped="0" failures="2" errors="0" timestamp="2025-09-07T10:23:51.310920900Z">
+<testcase classname="User Registration" name="Successful Registration with valid details" time="4.674">
+<system-out><![CDATA[
+Given I am on the Registration page.........................................passed
+When I enter "Manasa" in the Registration First Name field..................passed
+And I enter "Aduvala" in the Registration Last Name field...................passed
+And I enter "manasaaduvala123@example.com" in the Registration Email field..passed
+And I enter "9818964267" in the Registration Telephone field................passed
+And I enter "newpass123" in the Registration Password field.................passed
+And I enter "newpass123" in the Registration Confirm Password field.........passed
+And I select "Yes" for Registration Newsletter subscription.................passed
+And I check the Registration Privacy Policy checkbox........................passed
+And I click on the Registration Continue button.............................passed
+Then I should see the Registration success message "Your Account Has Been Created!".passed
+]]></system-out>
+</testcase>
+<testcase classname="Login functionality" name="Successful login with valid credentials" time="2.793">
+<system-out><![CDATA[
+Given I am on the Login page................................................passed
+When I enter "manasaaduvala123@gmail.com" in the Email field................passed
+And I enter "newpass123" in the Login Password field........................passed
+And I click on the Login button.............................................passed
+Then I should be logged in successfully.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Product Search Functionality" name="Search multiple products from search bar" time="14.739">
+<system-out><![CDATA[
+Given User is on the TutorialNinja homepage.................................passed
+When User searches for "Canon EOS 5D".......................................passed
+Then User should see the search results for "Canon EOS 5D"..................passed
+And wait for 2 seconds......................................................passed
+When User searches for "Apple Cinema 30"....................................passed
+Then User should see the search results for "Apple Cinema 30"...............passed
+And wait for 2 seconds......................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Add a product to Wish List" name="Add iPhone to the Wish List after login" time="2.81">
+<failure type="org.openqa.selenium.StaleElementReferenceException" message="stale element reference: stale element not found
+  (Session info: chrome=140.0.7339.81)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [207b7f9b56ce1feef49f6cd65e52f7ca, clickElement {id=f.206D025EFAB70DCFC098B2CE9FDB7091.d.60125BFCD8B52B320C508B5F6BC384E8.e.50}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.81, chrome: {chromedriverVersion: 140.0.7339.80 (670b6f192f46..., userDataDir: C:\Users\MANASA~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56322}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56322/devtoo..., se:cdpVersion: 140.0.7339.81, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (207b7f9b56ce1feef49f6cd65e52f7ca)] -&gt; link text: Phones &amp; PDAs]
+Session ID: 207b7f9b56ce1feef49f6cd65e52f7ca">
+<![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
+  (Session info: chrome=140.0.7339.81)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [207b7f9b56ce1feef49f6cd65e52f7ca, clickElement {id=f.206D025EFAB70DCFC098B2CE9FDB7091.d.60125BFCD8B52B320C508B5F6BC384E8.e.50}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.81, chrome: {chromedriverVersion: 140.0.7339.80 (670b6f192f46..., userDataDir: C:\Users\MANASA~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56322}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56322/devtoo..., se:cdpVersion: 140.0.7339.81, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (207b7f9b56ce1feef49f6cd65e52f7ca)] -> link text: Phones & PDAs]
+Session ID: 207b7f9b56ce1feef49f6cd65e52f7ca
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at stepDefinition.WishlistStep.i_navigate_to_the_category(WishlistStep.java:32)
+	at ✽.I navigate to the "Phones & PDAs" category(file:///C:/Users/manasaaduvala/eclipse-workspace/OpenCart/src/test/resources/features/04Wishlist.feature:4)
+]]>
+</failure>
+<system-out><![CDATA[
+Given I am logged in to TutorialsNinja......................................passed
+When I navigate to the "Phones & PDAs" category.............................failed
+And I add the "iPhone" product to the Wish List.............................skipped
+Then I should see a success message "Success: You have added iPhone to your wish list!".skipped
+And the product "iPhone" should be listed in my Wish List...................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Add to Cart Functionality" name="Add iPhone to the cart" time="3.22">
+<system-out><![CDATA[
+Given I am on the Tutorials Ninja homepage..................................passed
+When I choose the featured product "iPhone".................................passed
+And I click on "Add to Cart"................................................passed
+Then my shopping cart count should be incremented by 1......................passed
+And the cart total should reflect the product price.........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Hover over all main menus" name="Hover over each main menu item" time="11.733">
+<system-out><![CDATA[
+Given I am on the homepage..................................................passed
+When I hover over all the main menu items...................................passed
+Then I should see all menus highlighted.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Contact Us Form" name="Submit a query through the contact form" time="5.494">
+<system-out><![CDATA[
+Given User is on the Contact Us page........................................passed
+When User enters name "Manasa"..............................................passed
+And User enters email "manasaaduvala123@gmail.com"..........................passed
+And User enters enquiry "I would like to know about my order dispatchment.".passed
+And User clicks on Submit button............................................passed
+Then User should be redirected to the success page..........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Change currency on TutorialNinja" name="User changes currency to Euro" time="3.7">
+<system-out><![CDATA[
+Given User is on TutorialNinja homepage.....................................passed
+When User changes currency to "Euro"........................................passed
+Then Currency should be displayed as "€"....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Change currency on TutorialNinja" name="User changes currency to Dollar" time="1.399">
+<system-out><![CDATA[
+Given User is on TutorialNinja homepage.....................................passed
+When User changes currency to "Dollar"......................................passed
+Then Currency should be displayed as "$"....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Change currency on TutorialNinja" name="User changes currency to Pound" time="1.799">
+<system-out><![CDATA[
+Given User is on TutorialNinja homepage.....................................passed
+When User changes currency to "Pound".......................................passed
+Then Currency should be displayed as "£"....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Verify footer section As a user" name="Verify footer links are displayed" time="2.479">
+<system-out><![CDATA[
+Given I am on the home page.................................................passed
+When I scroll down to the footer............................................passed
+Then I should see the following footer links:...............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Change Password Functionality" name="Verify that user is able to change password with valid details" time="4.088">
+<failure type="org.openqa.selenium.NoSuchElementException" message="no such element: Unable to locate element: {&quot;method&quot;:&quot;link text&quot;,&quot;selector&quot;:&quot;My Account&quot;}
+  (Session info: chrome=140.0.7339.81)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [57d0cce489a8eb94115c2738d27697fa, findElement {using=link text, value=My Account}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.81, chrome: {chromedriverVersion: 140.0.7339.80 (670b6f192f46..., userDataDir: C:\Users\MANASA~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59391}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59391/devtoo..., se:cdpVersion: 140.0.7339.81, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 57d0cce489a8eb94115c2738d27697fa">
+<![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"link text","selector":"My Account"}
+  (Session info: chrome=140.0.7339.81)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [57d0cce489a8eb94115c2738d27697fa, findElement {using=link text, value=My Account}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.81, chrome: {chromedriverVersion: 140.0.7339.80 (670b6f192f46..., userDataDir: C:\Users\MANASA~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59391}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59391/devtoo..., se:cdpVersion: 140.0.7339.81, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 57d0cce489a8eb94115c2738d27697fa
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at stepDefinition.ChangePasswordStep.user_navigates_to_change_password_page(ChangePasswordStep.java:37)
+	at ✽.user navigates to Change Password page(file:///C:/Users/manasaaduvala/eclipse-workspace/OpenCart/src/test/resources/features/10ChangePassword.feature:6)
+]]>
+</failure>
+<system-out><![CDATA[
+Given user is on TutorialNinja homepage.....................................passed
+When user navigates to Login page...........................................passed
+And user logs in with username "manasaaduvala123@gmail.com" and password "newpass123".passed
+And user navigates to Change Password page..................................failed
+And user enters new password "newpass" and confirm password "newpass".......skipped
+And user clicks on Continue button..........................................skipped
+Then user should see a success message "Success: Your password has been successfully updated.".skipped
+]]></system-out>
+</testcase>
+</testsuite>
